@@ -1,0 +1,1211 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Travsplore</title> 
+        <meta name="description" content="Travsplore - Best travel agency for domestic and international tours"> 
+        <meta name="keywords" content="travel, tours, honeymoon packages, travel agency India"> 
+        <meta name="author" content="Travsplore"> 
+        
+        <!-- Google Fonts (Correct Link) --> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+        
+        <style> 
+            body { 
+                margin: 0; 
+                font-family: 'Poppins', 
+                sans-serif; 
+                background-color: #eaf7ee; 
+            } 
+            
+            h2 { 
+                font-family: 'Playfair Display', serif; 
+            } 
+            
+            .hero h1 { 
+                font-family: 'Poppins', sans-serif; 
+            } 
+            
+            /* NAVBAR */ 
+            .navbar { 
+                background: #1b5e20; 
+                padding: 15px 30px; 
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center; 
+                position: sticky; 
+                top: 0; 
+                z-index: 1000; 
+            } 
+
+            /* LOGO */ 
+            .logo { 
+                color: white; 
+                font-size: 22px; 
+                font-weight: bold; 
+            } 
+
+            /* NAV LINKS (desktop) */ 
+            .nav-links { 
+                display: flex; 
+                align-items: center; 
+            }
+
+            .nav-links a { 
+                color: white; 
+                margin: 0 12px; 
+                text-decoration: none; 
+                font-weight: 500; 
+                transition: 0.3s; 
+            } 
+
+            .nav-links a:hover { 
+                color: #c8e6c9; 
+                border-bottom: 2px solid #c8e6c9; 
+            }
+
+            /* HAMBURGER ICON */ 
+            .menu-toggle { 
+                display: none; 
+                color: white; 
+                font-size: 24px; 
+                cursor: pointer; 
+            } 
+
+            .service-card, .package-card, .testimonial-card { 
+                cursor: pointer; 
+            } 
+            
+            .nav-links a { 
+                color: white; 
+                margin: 0 12px; 
+                text-decoration: none; 
+                font-weight: 500; 
+                transition: 0.3s; 
+            } 
+            
+            .nav-links a:hover { 
+                color: #c8e6c9; 
+                border-bottom: 2px solid #c8e6c9; 
+            } 
+            
+            @media (max-width: 768px) { 
+                .menu-toggle { 
+                    display: block; 
+                } 
+                
+                .nav-links { 
+                    display: none; 
+                    flex-direction: column; 
+                    position: absolute; 
+                    top: 70px; 
+                    right: 20px; 
+                    background: #1b5e20; 
+                    width: 200px; 
+                    padding: 15px; 
+                    border-radius: 10px; 
+                } 
+                
+                .nav-links.active { 
+                    display: flex; 
+                } 
+                
+                .nav-links a { 
+                    margin: 10px 0; 
+                } 
+            } 
+            
+            /* HERO */ 
+            .hero { 
+                background-image: url('images/nick-kane-eaI3VpRnMbw-unsplash.jpg'); 
+                background-size: cover; 
+                background-position: 
+                center; 
+                color: white; 
+                text-align: center; 
+                padding: 120px 20px; 
+            } 
+            
+            .hero-buttons { 
+                margin-top: 20px; 
+            } 
+            
+            .btn { 
+                background: #1b5e20; 
+                color: white; 
+                padding: 12px 20px; 
+                text-decoration: none; 
+                border-radius: 8px; 
+                margin: 5px; 
+                display: inline-block; 
+                transition: 0.3s; } 
+                
+                .btn:hover { 
+                    background: #2e7d32; 
+                } 
+                
+                .btn-outline { 
+                    background: transparent; 
+                    border: 2px solid white; 
+                } 
+                
+                .btn-outline:hover { 
+                    background: white; 
+                    color: #1b5e20; 
+                } 
+                
+                section { 
+                    padding: 40px; 
+                } 
+                
+                h2 { 
+                    color: #1b5e20; 
+                } 
+                
+                .hero h1 { 
+                    font-size: 70px; 
+                    letter-spacing: 2px; 
+                    font-weight: bold; 
+                } 
+                
+                .hero h1 { 
+                    margin-bottom: 0; 
+                } 
+                
+                .hero .tagline { 
+                    margin-top: 2px; 
+                } 
+                
+                #about p { 
+                    line-height: 1.6; 
+                    margin-bottom: 15px; 
+                } 
+                
+                /* PACKAGE CARDS */ 
+                .package-cards { 
+                    display: grid; 
+                    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+                    gap: 20px; 
+                } 
+                
+                .package-card { 
+                    background: white; 
+                    padding: 20px; 
+                    border-radius: 15px; 
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+                    transition: 0.3s; 
+                    text-align: center; 
+                } 
+                
+                .package-card:hover { 
+                    transform: translateY(-10px); 
+                    box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
+                } 
+                
+                .package-card h3 {
+                    margin-bottom: 10px; 
+                    color: #1b5e20; 
+                } 
+                
+                .package-card p { 
+                    font-size: 14px; 
+                    color: #555; 
+                } 
+                
+                /* PRICE */ 
+                .price { 
+                    display: block; 
+                    margin: 10px 0; 
+                    font-weight: bold; 
+                    color: #1b5e20; 
+                } 
+                
+                /* BUTTON */ 
+                .package-card button { 
+                    background: #1b5e20; 
+                    color: white; 
+                    border: none; 
+                    padding: 10px 15px; 
+                    border-radius: 8px; 
+                    cursor: pointer; 
+                    transition: 0.3s; 
+                } 
+                
+                .package-card button:hover { 
+                    background: #2e7d32;
+                } 
+                
+                .package-buttons {
+                    margin-top: 10px; 
+                } 
+                
+                .btn-small { 
+                    padding: 8px 12px; 
+                    margin: 5px; 
+                    border: 1px solid #1b5e20; 
+                    background: white; 
+                    color: #1b5e20; 
+                    border-radius: 6px; 
+                    cursor: pointer; 
+                    transition: 0.3s; 
+                } 
+                
+                .btn-small:hover {
+                    background: #c8e6c9; 
+                } 
+                
+                /* Primary button */ 
+                .btn-small.primary { 
+                    background: #1b5e20; 
+                    color: white; 
+                    border: none; 
+                } 
+                
+                .btn-small.primary:hover { 
+                    background: #2e7d32;
+                } 
+                
+                /* INSTAGRAM STYLE CARDS */ 
+                .cards { 
+                    display: grid; 
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+                    gap: 15px; 
+                } 
+                
+                .card { 
+                    position: relative; 
+                    border-radius: 15px; 
+                    overflow: hidden; 
+                    cursor: pointer; 
+                } 
+                
+                .card img { 
+                    width: 100%; 
+                    height: 250px; 
+                    object-fit: cover; 
+                    transition: 0.4s; 
+                } 
+                
+                .card:hover img { 
+                    transform: scale(1.1); 
+                } 
+                
+                .card.fade-in { 
+                    opacity: 0; 
+                    transform: translateY(40px); 
+                } 
+                
+                .card.show { 
+                    opacity: 1; 
+                    transform: translateY(0); 
+                    transition: all 0.6s ease; 
+                } 
+                
+                /* SERVICE CARDS */ 
+                .service-cards { 
+                    display: grid; 
+                    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+                    gap: 20px; 
+                } 
+                
+                .service-card {
+                    background: #f9f9f9; 
+                    padding: 20px; 
+                    border-radius: 15px; 
+                    text-align: center; 
+                    transition: 0.3s; 
+                } 
+                
+                .service-card:hover { 
+                    transform: translateY(-8px); 
+                    background: #1b5e20; 
+                    color: white; 
+                } 
+                
+                .service-card h3 { 
+                    margin-bottom: 10px; 
+                } 
+                
+                .service-card p { 
+                    font-size: 14px; 
+                } 
+                
+                /* ICON STYLE */ 
+                .service-card i { 
+                    font-size: 30px; 
+                    color: #1b5e20; 
+                    margin-bottom: 10px; 
+                    transition: 0.3s; 
+                } 
+                
+                /* ICON HOVER EFFECT */ 
+                .service-card:hover i { 
+                    color: white; 
+                } 
+                
+                .center-btn { 
+                    text-align: center; 
+                    margin-top: 30px; 
+                } 
+                
+                /* PLAN YOUR TRIP */ 
+                .plan-container { 
+                    display: flex; 
+                    justify-content: center; 
+                } 
+                
+                .plan-form { 
+                    width: 100%; 
+                    max-width: 500px; 
+                    display: flex; 
+                    flex-direction: column; 
+                    gap: 15px; 
+                } 
+                
+                .plan-form input, 
+                .plan-form select, 
+                .plan-form textarea { 
+                    padding: 12px; 
+                    border-radius: 8px; 
+                    border: 1px solid #ccc; 
+                    font-family: 'Poppins', sans-serif; 
+                } 
+                    
+                .plan-form textarea { 
+                    resize: none; 
+                    height: 100px; 
+                } 
+                        
+                .plan-form button { 
+                    background: #1b5e20; 
+                    color: white; 
+                    border: none; 
+                    padding: 12px; 
+                    border-radius: 8px; 
+                    cursor: pointer; 
+                    transition: 0.3s; 
+                } 
+                            
+                .plan-form button:hover { 
+                    background: #2e7d32; 
+                } 
+                            
+                .plan-form label { 
+                    font-size: 14px; 
+                    font-weight: 500; 
+                    color: #333; 
+                } 
+                            
+                /* TESTIMONIALS */ 
+                .testimonial-cards { 
+                    display: grid; 
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+                    gap: 20px; 
+                    text-align: center; 
+                } 
+                                    
+                .testimonial-card { 
+                    background: #f9f9f9; 
+                    padding: 25px; 
+                    border-radius: 15px; 
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+                    transition: 0.3s; 
+                } 
+
+                .testimonial-card:hover { 
+                    transform: translateY(-8px); 
+                    } 
+                                    
+                /* PROFILE IMAGE */ 
+                .testimonial-card img { 
+                    width: 70px; 
+                    height: 70px; 
+                    border-radius: 50%; 
+                    object-fit: cover; 
+                    margin-bottom: 10px; 
+                } 
+                                        
+                /* STAR RATING */ 
+                .testimonial-card p:first-of-type { 
+                    margin: 5px 0; 
+                } 
+                                            
+                /* NAME */ 
+                .testimonial-card h4 {
+                    margin-top: 10px; 
+                    color: #1b5e20; 
+                } 
+                                                
+                /* SLIDER */ 
+                .slider { 
+                    overflow: hidden; 
+                    width: 100%; 
+                } 
+                
+                .slides { 
+                    display: flex; 
+                    width: calc(250px * 12); /* double images for smooth loop */ 
+                    animation: slide 20s linear infinite;   
+                } 
+                       
+                .slides img { 
+                    width: 250px; 
+                    height: 180px; 
+                    object-fit: cover; 
+                    margin: 5px; 
+                    border-radius: 10px; 
+                } 
+                        
+                /* AUTO SLIDE ANIMATION */ 
+                    @keyframes slide { 
+                    0% { transform: translateX(0); } 
+                    100% { transform: translateX(-50%); } 
+                } 
+                            
+                /* BLOG SECTION */
+                .blog-cards { 
+                    display: grid; 
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+                    gap: 20px; 
+                } 
+                    
+                .blog-card { 
+                    background: white; 
+                    border-radius: 15px; 
+                    overflow: hidden; 
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+                    transition: 0.3s; 
+                } 
+                    
+                .blog-card:hover { 
+                    transform: translateY(-8px); 
+                } 
+                    
+                .blog-card img { 
+                     width: 100%; 
+                    height: 180px; 
+                    object-fit: cover; 
+                } 
+                
+                .blog-card h3 { 
+                    padding: 10px; 
+                    color: #1b5e20; 
+                } 
+                        
+                .blog-card p { 
+                    padding: 0 10px; 
+                    font-size: 14px; 
+                    color: #555; 
+                } 
+                            
+                .blog-card button { 
+                    margin: 10px;
+                    padding: 8px 12px; 
+                    background: #1b5e20; 
+                    color: white; 
+                    border: none; 
+                    border-radius: 6px; 
+                    cursor: pointer; 
+                } 
+                    
+                .blog-card button:hover {
+                    background: #2e7d32; 
+                } 
+                
+                /* FAQ */ 
+                .faq-container { 
+                    max-width: 700px; 
+                    margin: auto; 
+                } 
+                
+                .faq-item { 
+                    background: #f9f9f9; 
+                    margin-bottom: 10px; 
+                    border-radius: 10px; 
+                    overflow: hidden; 
+                    cursor: pointer; 
+                } 
+                
+                .faq-question { 
+                    padding: 15px; 
+                    font-weight: bold; 
+                    position: relative; 
+                } 
+                
+                .faq-answer { 
+                    padding: 0 15px; 
+                    max-height: 0; 
+                    overflow: hidden; 
+                    transition: 0.4s; 
+                    font-size: 14px; 
+                    color: #555; 
+                } 
+                
+                /* ACTIVE STATE */ 
+                .faq-item.active .faq-answer { 
+                    max-height: 150px; 
+                    padding: 15px; 
+                } 
+                
+                .faq-question::after { 
+                    content: "+"; 
+                    position: absolute; 
+                    right: 20px; 
+                } 
+                
+                .faq-item.active .faq-question::after {
+                    content: "-"; 
+                } 
+                
+                .contact-container { 
+                    display: flex; 
+                    gap: 30px; 
+                    flex-wrap: wrap; 
+                } 
+                
+                .contact-info { 
+                    flex: 1; 
+                } 
+                
+                .contact-form { 
+                    flex: 1; 
+                    display: flex; 
+                    flex-direction: column; 
+                    gap: 10px; 
+                } 
+                
+                .contact-form input, 
+                .contact-form textarea { 
+                    padding: 10px; 
+                    border-radius: 8px; 
+                    border: 1px solid #ccc; 
+                } 
+                
+                .contact-form button { 
+                    background: #1b5e20; 
+                    color: white; 
+                    padding: 10px; 
+                    border: none; 
+                    border-radius: 8px; 
+                } 
+                
+                .offer-cards { 
+                    display: grid; 
+                    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+                    gap: 20px; 
+                } 
+                
+                .offer-card { 
+                    background: #1b5e20; 
+                    color: white; 
+                    padding: 20px; 
+                    border-radius: 15px; 
+                } 
+                
+                .fade-in { 
+                    opacity: 0; 
+                    transform: translateY(40px); 
+                } 
+                
+                .fade-in.show { 
+                    opacity: 1; 
+                    transform: translateY(0); 
+                    transition: all 0.8s ease; 
+                } 
+                
+                html { 
+                    scroll-behavior: smooth; 
+                } 
+                
+                .tagline { 
+                    font-family: 'Playfair Display', serif; 
+                    font-size: 20px; 
+                    letter-spacing: 2px; 
+                    font-style: italic; 
+                    opacity: 0.9; 
+                } 
+                
+                .overlay { 
+                    position: absolute; 
+                    bottom: 0; 
+                    width: 100%; 
+                    background: rgba(0,0,0,0.5); 
+                    color: white; 
+                    text-align: center; 
+                    padding: 10px; 
+                    font-weight: bold; 
+                } 
+
+                /* FOOTER */
+                footer { 
+                    background: #1b5e20; 
+                    color: white; 
+                    text-align: center; 
+                    padding: 20px; 
+                    margin-top: 30px; 
+                } 
+                
+                footer a { 
+                    color: white; 
+                    text-decoration: none; 
+                    margin: 0 5px; 
+                } 
+                
+                footer a:hover { 
+                    text-decoration: underline; 
+                } 
+                
+                footer { 
+                    background: #1b5e20;
+                    color: white; 
+                    text-align: center; 
+                    padding: 25px;
+                    margin-top: 30px; 
+                } 
+                
+                /* LINKS */ 
+                .footer-links { 
+                    margin-bottom: 10px; 
+                } 
+                
+                .footer-links a { 
+                    color: white; 
+                    margin: 0 10px; 
+                    text-decoration: none; 
+                } 
+                
+                .footer-links a:hover { 
+                    text-decoration: underline; 
+                } 
+                
+                /* ICONS */ 
+                .social-icons { 
+                    margin: 10px 0; 
+                } 
+                
+                .social-icons a { 
+                    color: white; 
+                    font-size: 20px; 
+                    margin: 0 10px; 
+                    transition: 0.3s; 
+                } 
+                
+                .social-icons a:hover { 
+                    color: #c8e6c9; 
+                    transform: scale(1.2); 
+                } 
+                
+                </style> 
+                </head> 
+                <body> 
+                    
+                    <!-- NAVBAR --> 
+                    <nav class="navbar"> 
+                        <span class="logo">Travsplore</span> 
+                        
+                    <!-- Hamburger icon --> 
+                     <div class="menu-toggle" id="menu-toggle"> 
+                        <i class="fas fa-bars"></i> 
+                    </div> 
+                    <div class="nav-links" id="nav-links"> 
+                        <a href="#">Home</a> 
+                        <a href="#about">About</a> 
+                        <a href="#packages">Packages</a> 
+                        <a href="#destinations">Destinations</a> 
+                        <a href="#services">Services</a> 
+                        <a href="#gallery">Gallery</a> 
+                        <a href="#blog">Blog</a> 
+                        <a href="#faq">FAQ</a> 
+                        <a href="#offers">Offers</a> 
+                        <a href="#contact">Contact</a> 
+                    </div> 
+                    </nav> 
+                    
+                    <!-- HERO --> 
+                     <div class="hero"> 
+                        <h1>Travsplore</h1> 
+                        <p class="tagline">Travel Far, Explore More</p> 
+                        <div class="hero-buttons"> 
+                            <a href="#packages" class="btn">Explore Packages</a> 
+                            <a href="#plan" class="btn btn-outline">Plan Your Trip</a> 
+                        </div> 
+                    </div> 
+                    
+                    <!-- ABOUT --> 
+                     <section id="about"> 
+                        <h2>About Us</h2> 
+                        <p> Travsplore is a modern travel agency dedicated to turning your dream journeys into unforgettable experiences.We specialize in crafting personalized travel packages that suit every traveler, whether you are looking for a relaxing getaway, an adventurous escape, or a romantic honeymoon. 
+                        </p> 
+
+                        <p> Our mission is to make travel simple, affordable, and enjoyable for everyone. From breathtaking international destinations like Paris, Switzerland, and Bali to amazing domestic tours, we ensure every trip is carefully planned with comfort and quality in mind. 
+                        </p>
+
+                        <p> With services including flight booking, hotel reservations, visa assistance, and travel insurance, Travsplore provides a complete travel solution under one roof. We believe in creating memorable journeys and helping you explore the world with confidence and ease.
+                        </p> 
+                    </section> 
+                    
+                    <!-- PACKAGES --> 
+                    <section id="packages" class="fade-in"> 
+                        <h2>Packages</h2> 
+                        <div class="package-cards"> 
+                            
+                            <!-- CARD --> 
+                            <div class="package-card"> 
+                                <h3>Domestic Tours</h3> 
+                                <p>Explore India with budget-friendly travel plans.</p> 
+                                <span class="price">Starting from ₹4,999</span> 
+                                <div class="package-buttons"> 
+                                    <button class="btn-small primary" onclick="scrollToPlan()">Book Now</button> 
+                                </div> 
+                            </div> 
+                            
+                            <!-- CARD --> 
+                             <div class="package-card"> 
+                                <h3>International Tours</h3> 
+                                <p>Visit top global destinations with premium packages.</p> 
+                                <span class="price">Starting from ₹49,999</span> 
+                                <div class="package-buttons"> 
+                                    <button class="btn-small primary" onclick="scrollToPlan()">Book Now</button> 
+                                </div> 
+                            </div> 
+                            
+                            <!-- CARD --> 
+                             <div class="package-card"> 
+                                <h3>Honeymoon Packages</h3> 
+                                <p>Romantic trips for couples.</p> 
+                                <span class="price">Starting from ₹29,999</span> 
+                                <div class="package-buttons"> 
+                                    <button class="btn-small primary" onclick="scrollToPlan()">Book Now</button> 
+                                </div> 
+                            </div> 
+                            
+                            <!-- CARD --> 
+                             <div class="package-card"> 
+                                <h3>Group Tours</h3> 
+                                <p>Perfect for friends and groups.</p> 
+                                <span class="price">Starting from ₹9,999</span> 
+                                <div class="package-buttons"> 
+                                    <button class="btn-small primary" onclick="scrollToPlan()">Book Now</button> 
+                                </div> 
+                            </div> 
+                            
+                            <!-- CARD --> 
+                             <div class="package-card"> 
+                                <h3>Custom Packages</h3> 
+                                <p>Personalized travel plans.</p> 
+                                <span class="price">Custom Pricing</span> 
+                                <div class="package-buttons"> 
+                                    <button class="btn-small primary" onclick="scrollToPlan()">Book Now</button> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </section> 
+                    
+                    <!-- DESTINATIONS --> 
+                     <section id="destinations"> 
+                        <h2>Destinations</h2> 
+                        <div class="cards fade-in"> 
+
+                            <div class="card fade-in"> 
+                                <img src="images/earth-DXuxHw3S5ak-unsplash.jpg"> 
+                                <div class="overlay">France </div> 
+                            </div> 
+                            
+                            <div class="card fade-in">
+                                <img src="images/patrick-robert-doyle-eb8dmXNOGP4-unsplash.jpg"> 
+                                <div class="overlay">Switzerland </div> 
+                            </div>
+
+                            <div class="card fade-in"> 
+                                <img src="images/rod-long-4dcsLxQxSHY-unsplash.jpg">
+                                <div class="overlay">New Zealand </div> 
+                            </div> 
+
+                            <div class="card fade-in"> 
+                                <img src="images/redd-francisco-gdQnsMbhkUs-unsplash.jpg"> 
+                                <div class="overlay">Canada </div> 
+                            </div> 
+                            
+                            <div class="card fade-in"> 
+                                <img src="images/shifaaz-shamoon-qtbV_8P_Ksk-unsplash.jpg"> 
+                                <div class="overlay">Maldives </div> 
+                            </div> 
+                            
+                            <div class="card fade-in"> 
+                                <img src="images/jisun-han-cjSsSQ7Yedk-unsplash.jpg"> 
+                                <div class="overlay">Singapore </div> 
+                            </div> 
+                            
+                            <div class="card fade-in"> 
+                                <img src="images/guillaume-marques-bnMPFPuSCI0-unsplash.jpg"> 
+                                <div class="overlay">Bali </div> 
+                            </div> 
+                            
+                            <div class="card fade-in"> 
+                                <img src="images/mathew-schwartz-gsllxmVO4HQ-unsplash.jpg"> 
+                                <div class="overlay">Thailand </div> 
+                            </div> 
+                            
+                            <div class="card fade-in"> 
+                                <img src="images/robson-hatsukami-morgan-ku9Ftte6Ymo-unsplash.jpg"> 
+                                <div class="overlay">South Korea </div> 
+                            </div> 
+                            
+                            <div class="card fade-in"> 
+                                <img src="images/jezael-melgoza-alY6_OpdwRQ-unsplash.jpg"> 
+                                <div class="overlay">Japan </div> 
+                            </div> 
+                        </div> 
+                    </section> 
+                    
+                    <!-- SERVICES --> 
+                    <section id="services" class="fade-in"> 
+                        <h2>Our Services</h2> 
+                        <div class="service-cards"> 
+                            
+                            <div class="service-card"> 
+                                <i class="fas fa-plane"></i> 
+                                <h3>Flight Booking</h3> 
+                                <p>Get the best deals on domestic and international flights with ease.</p> 
+                            </div> 
+                            
+                            <div class="service-card"> 
+                                <i class="fas fa-hotel"></i> 
+                                <h3>Hotel Booking</h3> 
+                                <p>Comfortable stays from budget hotels to luxury resorts.</p> 
+                            </div> 
+                            
+                            <div class="service-card"> 
+                                <i class="fas fa-passport"></i> 
+                                <h3>Visa Assistance</h3> 
+                                <p>Hassle-free visa processing with expert guidance.</p> 
+                            </div> 
+                            
+                            <div class="service-card"> 
+                                <i class="fas fa-id-card"></i> 
+                                <h3>Passport Help</h3> 
+                                <p>Quick and easy passport application support.</p> 
+                            </div> 
+                            
+                            <div class="service-card"> 
+                                <i class="fas fa-shield-alt"></i> 
+                                <h3>Travel Insurance</h3> 
+                                <p>Travel safely with complete insurance coverage.</p> 
+                            </div> 
+                            
+                            <div class="service-card"> 
+                                <i class="fas fa-map-marked-alt"></i> 
+                                <h3>Guided Tours</h3> 
+                                <p>Explore destinations with experienced guides.</p> 
+                            </div> 
+                            
+                            <div class="service-card"> 
+                                <i class="fas fa-car"></i> 
+                                <h3>Transport Services</h3> 
+                                <p>Airport transfers and local transportation for a smooth journey.</p> 
+                            </div> 
+                            
+                            <div class="service-card"> 
+                                <i class="fas fa-users"></i> 
+                                <h3>Group Tours</h3> 
+                                <p>Well-organized group travel packages for families and friends.</p> 
+                            </div> 
+                            
+                            <div class="service-card">
+                                <i class="fas fa-ship"></i>
+                                <h3>Cruise Booking</h3>
+                                <p>Enjoy luxury cruise trips with world-class facilities and breathtaking views.</p>
+                            </div>
+
+                            <div class="center-btn"> 
+                                <a href="#contact" class="btn">Get a Free Quote</a> 
+                            </div> 
+                        </div> 
+                    </section> 
+                    
+                    <!-- PLAN YOUR TRIP --> 
+                     <section id="plan" class="fade-in"> 
+                        <h2>Plan Your Trip</h2> 
+                        <div class="plan-container"> 
+                            
+                            <form class="plan-form"> 
+                                <input type="text" placeholder="Your Name" required> 
+                                <input type="email" placeholder="Your Email" required> 
+                                <input type="text" placeholder="Destination" required> 
+                                <label>Travel Date</label> 
+                                <input type="date" required> 
+                                <input type="number" placeholder="Number of Travelers" required> 
+                                
+                                <select required> 
+                                    <option value="">Select Package</option> 
+                                    <option>Domestic Tour</option> 
+                                    <option>International Tour</option> 
+                                    <option>Honeymoon</option> 
+                                    <option>Family Tour</option> 
+                                    <option>Group Tour</option> 
+                                    <option>Custom Packages</option> 
+                                </select> 
+                                
+                                <textarea placeholder="Additional Requests"></textarea> 
+                                <button type="submit">Plan My Trip</button> 
+                            </form> 
+                        </div> 
+                    </section> 
+                    
+                    <!-- TESTIMONIALS --> 
+                    <section id="testimonials" class="fade-in"> 
+                        <h2>What Our Customers Say</h2> 
+                        <div class="testimonial-cards"> 
+                            
+                            <div class="testimonial-card"> 
+                                <img src="images/halil-ibrahim-cetinkaya-WzGC8xSyqfg-unsplash.jpg" alt="User"> 
+                                <p>⭐⭐⭐⭐⭐</p> 
+                                <p>"Travsplore made our honeymoon trip to Bali unforgettable! Everything was perfectly planned."</p> 
+                                <h4>- Max</h4> 
+                            </div> 
+                            
+                            <div class="testimonial-card"> 
+                                <img src="images/mostafa-kordzangeneh-_tcJW4nqVtw-unsplash.jpg" alt="User"> 
+                                <p>⭐⭐⭐⭐⭐</p> 
+                                <p>"Excellent service from start to finish! Our trip to Switzerland was smooth, comfortable, and truly unforgettable."</p> 
+                                <h4>- Alex</h4> 
+                            </div> 
+                            
+                            <div class="testimonial-card"> 
+                               <img src="images/umar-kashif-GTHfD5XbkSw-unsplash.jpg" alt="User"> 
+                               <p>⭐⭐⭐⭐⭐</p> 
+                               <p>"The planning process was super easy and the support team was very helpful throughout our trip."</p> 
+                               <h4>- David</h4> 
+                            </div> 
+                            
+                            <div class="testimonial-card"> 
+                                <img src="images/daria-Kk311yR07Ec-unsplash.jpg" alt="User"> 
+                                <p>⭐⭐⭐⭐⭐</p> 
+                                <p>"Great experience! Affordable pricing and excellent arrangements for our group tour."</p> 
+                                <h4>- Andrea</h4> 
+                            </div> 
+                        </div> 
+                    </section> 
+                    
+                    <!-- GALLERY --> 
+                    <section id="gallery" class="fade-in"> 
+                        <h2>Gallery</h2> 
+                        <div class="slider"> 
+                            
+                            <div class="slides"> 
+                                <img src="images/tom-podmore-3mEK924ZuTs-unsplash.jpg"> 
+                                <img src="images/felix-rostig-UmV2wr-Vbq8-unsplash.jpg"> 
+                                <img src="images/luca-bravo-lWAOc0UuJ-A-unsplash.jpg"> 
+                                <img src="images/michael-discenza-5omwAMDxmkU-unsplash.jpg"> 
+                                <img src="images/matthias-schroder-64aCN1BEV-M-unsplash.jpg"> 
+                                <img src="images/juan-rojas-M62J7DBZ-hY-unsplash.jpg"> 
+                                <img src="images/thomas-stadler-r6LQc9feEZQ-unsplash.jpg"> 
+                                <img src="images/tom-podmore-3mEK924ZuTs-unsplash.jpg"> 
+                                <img src="images/felix-rostig-UmV2wr-Vbq8-unsplash.jpg"> 
+                                <img src="images/luca-bravo-lWAOc0UuJ-A-unsplash.jpg"> 
+                                <img src="images/michael-discenza-5omwAMDxmkU-unsplash.jpg"> 
+                                <img src="images/matthias-schroder-64aCN1BEV-M-unsplash.jpg"> 
+                                <img src="images/juan-rojas-M62J7DBZ-hY-unsplash.jpg"> 
+                                <img src="images/thomas-stadler-r6LQc9feEZQ-unsplash.jpg"> 
+                            </div> 
+                        </div> 
+                    </section> 
+                    
+                    <!-- BLOG --> 
+                    <section id="blog" class="fade-in"> 
+                        <h2>Travel Blog</h2> 
+                        <div class="blog-cards"> 
+                            
+                            <div class="blog-card"> 
+                                <img src="images/sebastian-pena-lambarri-U_i6h9Y50wQ-unsplash.jpg"> 
+                                <h3>Top 10 Places to Visit in Bali</h3> 
+                                <p>Discover the most beautiful beaches, temples, and hidden gems in Bali.</p> 
+                                <button>Read More</button> 
+                            </div> 
+                            
+                            <div class="blog-card"> 
+                                <img src="images/mesut-kaya-eOcyhe5-9sQ-unsplash.jpg"> 
+                                <h3>Travel Tips for First-Time Travelers</h3> 
+                                <p>Essential tips to make your first trip smooth and stress-free.</p> 
+                                <button>Read More</button> 
+                            </div> 
+                            
+                            <div class="blog-card"> 
+                                <img src="images/ismail-mohamed-sovile-u7qgO97JAEo-unsplash.jpg"> 
+                                <h3>Best Honeymoon Destinations</h3> 
+                                <p>Romantic places around the world for your perfect honeymoon.</p> 
+                                <button>Read More</button> 
+                            </div> 
+                        </div> 
+                    </section> 
+                    
+                    <!-- FAQ --> 
+                    <section id="faq" class="fade-in"> 
+                        <h2>Frequently Asked Questions</h2> 
+                        <div class="faq-container"> 
+                            
+                            <div class="faq-item"> 
+                                <div class="faq-question">What services does Travsplore offer?</div> 
+                                <div class="faq-answer">We offer flight booking, hotel booking, visa assistance, travel insurance, and customized tour packages.</div> 
+                            </div> 
+                            
+                            <div class="faq-item"> 
+                                <div class="faq-question">How can I book a trip?</div> 
+                                <div class="faq-answer">You can book a trip by filling out the “Plan Your Trip” form or contacting us directly via email.</div> 
+                            </div> 
+                            
+                            <div class="faq-item"> 
+                                <div class="faq-question">Do you provide international travel packages?</div> 
+                                <div class="faq-answer">Yes, we offer a wide range of international travel packages to popular destinations worldwide.</div> 
+                            </div> 
+                            
+                            <div class="faq-item"> 
+                                <div class="faq-question">Can I customize my travel package?</div> 
+                                <div class="faq-answer">Absolutely! We provide fully customizable travel packages based on your preferences and budget.</div> 
+                            </div> 
+                            
+                            <div class="faq-item"> 
+                                <div class="faq-question">What is included in your travel packages?</div> 
+                                <div class="faq-answer">Our packages typically include accommodation, transportation, sightseeing, and selected meals depending on the plan.</div> 
+                            </div> 
+                            
+                            <div class="faq-item"> 
+                                <div class="faq-question">Is travel insurance mandatory?</div> 
+                                <div class="faq-answer">Travel insurance is not mandatory but highly recommended for a safe and worry-free journey.</div> 
+                            </div> 
+                            
+                            <div class="faq-item"> 
+                                <div class="faq-question">How early should I book my trip?</div> 
+                                <div class="faq-answer">It is best to book at least 2–4 weeks in advance to get the best deals and availability.</div> 
+                            </div> 
+                        </div> 
+                    </section> 
+                    
+                    <!-- OFFERS --> 
+                    <section id="offers" class="fade-in"> 
+                        <h2>Special Offers</h2> 
+                        <div class="offer-cards">
+                            
+                            <div class="offer-card"> 
+                                <h3>Bali Offer</h3> 
+                                <p>Get 20% off on Bali honeymoon packages.</p> 
+                            </div> 
+                            
+                            <div class="offer-card"> 
+                                <h3>Maldives Deal</h3> 
+                                <p>Free candlelight dinner for couples.</p> 
+                            </div> 
+                            
+                            <div class="offer-card"> 
+                                <h3>Switzerland Trip</h3> 
+                                <p>Flat ₹10,000 discount on bookings.</p> 
+                            </div> 
+                        </div> 
+                    </section> 
+                    
+                    <!-- CONTACT --> 
+                    <section id="contact" class="fade-in"> 
+                        <h2>Contact Us</h2> 
+                        <div class="contact-container"> 
+                            
+                            <div class="contact-info"> 
+                                <p><strong>Email:</strong> travsplore@gmail.com</p> 
+                                <p><strong>Phone:</strong> +91 95396 11307</p> 
+                                <p><strong>Location:</strong> Kerala, India</p> 
+                            </div> 
+                            
+                            <form class="contact-form"> 
+                                <input type="text" placeholder="Your Name" required> 
+                                <input type="email" placeholder="Your Email" required>
+                                <textarea placeholder="Your Message"></textarea> 
+                                <button type="submit">Send Message</button> 
+                            </form> 
+                            
+                            <div style="margin-top: 15px;"> 
+                                <a href="https://wa.me/919539611307" class="btn">Chat on WhatsApp</a> 
+                            </div> 
+                        </div> 
+                    </section> 
+                    
+                    <!-- PRIVACY AND POLICY --> 
+                    <section id="privacy" class="fade-in"> 
+                        <h2>Privacy Policy</h2> 
+                        <p> Travsplore respects your privacy. We collect basic user information only to improve our services. Your personal data will never be shared with third parties without your consent. </p> 
+                    </section> 
+                    
+                    <!-- TERMS&CONDITIONS --> 
+                     <section id="terms" class="fade-in"> 
+                        <h2>Terms & Conditions</h2> 
+                        <p> By using Travsplore services, you agree to follow our booking policies and payment terms. All bookings are subject to availability and confirmation. </p> 
+                    </section> 
+                    
+                    <!-- REFUND POLICY --> 
+                     <section id="refund" class="fade-in"> 
+                        <h2>Refund Policy</h2> 
+                        <p> Refunds are processed based on cancellation timing and service terms. Some bookings may be non-refundable depending on the provider. </p> 
+                    </section> 
+                    
+                    <!-- FOOTER --> 
+                    <footer> 
+                        <div class="footer-links"> 
+                        <a href="#offers">Offers</a> 
+                        <a href="#privacy">Privacy Policy</a> 
+                        <a href="#terms">Terms & Conditions</a> 
+                        <a href="#refund">Refund Policy</a> 
+                        </div> 
+                        
+                        <div class="social-icons"> 
+                            <a href="#"><i class="fab fa-instagram"></i></a> 
+                            <a href="#"><i class="fab fa-whatsapp"></i></a> 
+                            <a href="#"><i class="fab fa-facebook"></i></a> 
+                            <a href="#"><i class="fab fa-twitter"></i></a> 
+                        </div> <p>© 2026 Travsplore</p> 
+                    </footer> 
+                    
+                    <script> 
+                    const elements = document.querySelectorAll('.fade-in'); 
+                    function checkScroll() { 
+                        elements.forEach((el, index) => { 
+                            const position = el.getBoundingClientRect().top; 
+                            const screenPosition = window.innerHeight / 1.2; 
+                            if (position < screenPosition) { 
+                                setTimeout(() => { 
+                                    el.classList.add('show'); 
+                                }, index * 100); 
+                            } 
+                        });
+                    } 
+                    window.addEventListener('scroll', checkScroll); 
+                    </script>
+                    
+                    <script> 
+                    const faqItems = document.querySelectorAll('.faq-item'); 
+                    faqItems.forEach(item => { 
+                        item.addEventListener('click', () => { 
+                            faqItems.forEach(i => { 
+                                if (i !== item) i.classList.remove('active'); 
+                            }); 
+                            item.classList.toggle('active'); 
+                        }); 
+                    }); 
+                    </script> 
+                    
+                    <script> 
+                    const toggle = document.getElementById("menu-toggle"); 
+                    const navLinks = document.getElementById("nav-links"); 
+                    toggle.addEventListener("click", () => { 
+                        navLinks.classList.toggle("active"); 
+                    }); 
+                    </script> 
+                    
+                    <script> 
+                    function scrollToPlan() { 
+                        document.getElementById("plan").scrollIntoView({ behavior: "smooth" }); 
+                    } 
+                    function showDetails(title, description) { 
+                        alert(title + "\n\n" + description); 
+                    } 
+                    </script> 
+                </body> 
+</html>
